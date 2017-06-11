@@ -41,10 +41,11 @@ class Solution {
         val deque = myDeque<Pair<Int, Int>>()
         for (i in 0..(m.size - 1))
             for (j in 0..(m[0].size - 1))
-                if (m[i][j] == 0)
-                    deque.addFirst(Pair(i, j))
-                else
-                    m[i][j] = Int.MAX_VALUE
+                when (m[i][j]) {
+                    0 -> deque.addFirst(Pair(i, j))
+                    else -> m[i][j] = Int.MAX_VALUE
+                }
+
 
         // BFS
         val directions: Array<Pair<Int, Int>> = arrayOf(Pair(1, 0), Pair(0, 1), Pair(-1, 0), Pair(0, -1))
@@ -53,10 +54,13 @@ class Solution {
             for ((k, h) in directions) {
                 val neighbor_i: Int = element.first + k
                 val neighbor_j: Int = element.second + h
-                if (0 <= neighbor_i && neighbor_i < m.size && 0 <= neighbor_j && neighbor_j < m[0].size
-                        && m[neighbor_i][neighbor_j] > m[element.first][element.second] + 1) {
-                    deque.addLast(Pair(neighbor_i, neighbor_j))
-                    m[neighbor_i][neighbor_j] = m[element.first][element.second] + 1
+                val isNeighborValid = 0 <= neighbor_i && neighbor_i < m.size && 0 <= neighbor_j && neighbor_j < m[0].size
+                when {
+                    (isNeighborValid && m[neighbor_i][neighbor_j] > m[element.first][element.second] + 1)
+                    -> {
+                        deque.addLast(Pair(neighbor_i, neighbor_j))
+                        m[neighbor_i][neighbor_j] = m[element.first][element.second] + 1
+                    }
                 }
             }
         }
