@@ -33,7 +33,7 @@
  */
 import utils.myDeque
 
-class Solution {
+class Solution_01_matrix {
     // T:O(m*n) S:O(m*n)
     fun updateMatrix(m: Array<Array<Int>>): Array<Array<Int>> {
 
@@ -74,7 +74,7 @@ class Solution {
 }
 
 fun main(args: Array<String>) {
-    val s = Solution()
+    val s = Solution_01_matrix()
     val a = arrayOf(
             arrayOf(1, 0, 0, 0),
             arrayOf(1, 1, 0, 0),
