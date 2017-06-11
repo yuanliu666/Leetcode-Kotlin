@@ -12,6 +12,7 @@
 class Solution_3sum_closest {
     // T:O(n^2) S:O(1)
     fun getClosestSum(arr: Array<Int>, t: Int): Int {
+        arr.sort()
         var j: Int
         var k: Int
         var ret = Int.MAX_VALUE
