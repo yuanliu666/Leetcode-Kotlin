@@ -49,12 +49,16 @@ class Solution {
 
         // BFS
         val directions: Array<Pair<Int, Int>> = arrayOf(Pair(1, 0), Pair(0, 1), Pair(-1, 0), Pair(0, -1))
+        var element: Pair<Int, Int>
         while (deque.peekFirst() != null) {
-            val element: Pair<Int, Int> = deque.getFirst() as Pair<Int, Int>
+            element = deque.getFirst() as Pair<Int, Int>
+            var neighbor_i: Int
+            var neighbor_j: Int
+            var isNeighborValid: Boolean
             for ((k, h) in directions) {
-                val neighbor_i: Int = element.first + k
-                val neighbor_j: Int = element.second + h
-                val isNeighborValid = 0 <= neighbor_i && neighbor_i < m.size && 0 <= neighbor_j && neighbor_j < m[0].size
+                neighbor_i = element.first + k
+                neighbor_j = element.second + h
+                isNeighborValid = 0 <= neighbor_i && neighbor_i < m.size && 0 <= neighbor_j && neighbor_j < m[0].size
                 when {
                     (isNeighborValid && m[neighbor_i][neighbor_j] > m[element.first][element.second] + 1)
                     -> {
