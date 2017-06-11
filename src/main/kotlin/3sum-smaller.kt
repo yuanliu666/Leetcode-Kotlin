@@ -17,7 +17,7 @@
  */
 
 class Solution_3sum_smaller {
-    // T:O(n^2)
+    // T:O(n^2) S:O(1)
     fun getSmallerSumCnt(arr: Array<Int>, t: Int): Int {
         arr.sort()
         var j: Int
