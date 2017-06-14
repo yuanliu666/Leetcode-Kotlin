@@ -53,7 +53,7 @@ class Solution_add_and_search_word_data_structure_design {
                     return false
                 cur = cur.children[word[i]]!!
             } else {
-                return cur.children.values.map { searchWordHelper(word.substring(i + 1), it) }.reduce { acc, b -> acc or b }
+                return cur.children.values.firstOrNull { searchWordHelper(word.substring(i + 1), it) } != null
             }
         }
 
@@ -70,9 +70,9 @@ fun main(args: Array<String>) {
     s.addWord("bad")
     s.addWord("dad")
     s.addWord("mad")
-    assert(!s.search("pad"))
-    assert(s.search("bad"))
-    assert(s.search(".ad"))
-    assert(s.search("b.."))
-    println("AC")
+    println(s.search("pad"))
+    println(s.search("bad"))
+    println(s.search(".ad"))
+    println(s.search("b.."))
+    println(s.search("b..."))
 }
