@@ -24,6 +24,7 @@ class simpleTrieNode {
     var isWord = false
 }
 
+// T:O(min(n, h)), per operation  S:O(min(n, h))
 class Solution_add_and_search_word_data_structure_design {
     val root: simpleTrieNode = simpleTrieNode()
 

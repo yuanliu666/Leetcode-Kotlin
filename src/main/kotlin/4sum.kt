@@ -20,6 +20,7 @@ data class quadruplet(val a: Int, val b: Int, val c: Int, val d: Int) {
 }
 
 class Solution_4sum {
+    // T:O(n^2*p) S:O(n^2*p)
     fun get4SumSets(arr: Array<Int>, t: Int): List<quadruplet> {
         val ret = arrayListOf<quadruplet>()
         // a ret map to check if set already exists

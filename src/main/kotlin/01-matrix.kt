@@ -34,7 +34,7 @@
 import utils.myDeque
 
 class Solution_01_matrix {
-    // T:O(m*n) S:O(m*n)
+    // T:O(m*n) S:O(m*n) where m, n is the row number and column number of matrix
     fun updateMatrix(m: Array<Array<Int>>): Array<Array<Int>> {
 
         // use deque to get init 0s
