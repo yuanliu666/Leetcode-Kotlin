@@ -5,8 +5,8 @@
       <configuration version="2" platform="JVM 1.6" useProjectSettings="false">
         <compilerSettings />
         <compilerArguments>
-          <option name="destination" value="D:\Kotlin\Leetcode-Kotlin\build\kotlin-classes\test" />
-          <option name="classpath" value="C:\Users\YUAN\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jre8\1.1.2-2\dd267c09da9c17ca21037429205eb12bf81489f7\kotlin-stdlib-jre8-1.1.2-2.jar;C:\Users\YUAN\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jre7\1.1.2-2\cec67c14515d8af92ae3e20e27b6da50a26fde84\kotlin-stdlib-jre7-1.1.2-2.jar;C:\Users\YUAN\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.1.2-2\2b22828f027e103dcd45f3aa240338bfdb53d16b\kotlin-stdlib-1.1.2-2.jar;C:\Users\YUAN\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar" />
+          <option name="destination" value="$MODULE_DIR$/../../build/kotlin-classes/test" />
+          <option name="classpath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jre8/1.1.2-2/dd267c09da9c17ca21037429205eb12bf81489f7/kotlin-stdlib-jre8-1.1.2-2.jar;C:/Users/YUAN/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jre7/1.1.2-2/cec67c14515d8af92ae3e20e27b6da50a26fde84/kotlin-stdlib-jre7-1.1.2-2.jar;C:/Users/YUAN/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.2-2/2b22828f027e103dcd45f3aa240338bfdb53d16b/kotlin-stdlib-1.1.2-2.jar;C:/Users/YUAN/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
           <option name="moduleName" value="Leetcode-Kotlin_main" />
@@ -15,13 +15,13 @@
           <option name="loadBuiltInsFromDependencies" value="true" />
           <option name="languageVersion" value="1.1" />
           <option name="apiVersion" value="1.1" />
+          <option name="pluginOptions">
+            <array />
+          </option>
           <option name="pluginClasspaths">
             <array />
           </option>
           <option name="coroutinesWarn" value="true" />
-          <option name="pluginOptions">
-            <array />
-          </option>
         </compilerArguments>
       </configuration>
     </facet>
