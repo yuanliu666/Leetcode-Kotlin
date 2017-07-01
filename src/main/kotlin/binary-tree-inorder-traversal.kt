@@ -1,6 +1,3 @@
-import utils.TreeNode
-import java.util.*
-
 /**
  * Given a binary tree, return the inorder traversal of its nodes' values.
  *
@@ -15,6 +12,8 @@ import java.util.*
  *
  * Note: Recursive solution is trivial, could you do it iteratively?
  */
+import utils.TreeNode
+import java.util.*
 
 class Solution_binary_tree_inorder_traversal {
     // T:O(n) S:O(h)
