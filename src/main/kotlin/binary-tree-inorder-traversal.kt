@@ -33,6 +33,34 @@ class Solution_binary_tree_inorder_traversal {
         return ret
     }
 
+    // T:O(n) S:O(h)
+    // This solution looks more verbose than first one,
+    // but it shares one similar solution across 3 types of binary tree traversal,
+    // which makes it very easy to remember and write
+    fun inOrderWithStack2(root: TreeNode): List<Int> {
+        val stk = Stack<Pair<TreeNode?, Boolean>>()
+        val ret = mutableListOf<Int>()
+        stk.push(Pair(root, false))
+        while (stk.isNotEmpty()) {
+            val p = stk.pop()
+            val cur = p.first
+            val isVisited = p.second
+            if (cur == null) {
+                continue
+            } else {
+                if (isVisited) {
+                    ret.add(cur.value)
+                } else {
+                    // only this part differs for different kinds of traversals
+                    stk.push(Pair(cur.right, false))
+                    stk.push(Pair(cur, true))
+                    stk.push(Pair(cur.left, false))
+                }
+            }
+        }
+        return ret
+    }
+
     // T:O(n) S:O(1)
     fun inOrderMorris(root: TreeNode): List<Int> {
         val ret = mutableListOf<Int>()
@@ -70,5 +98,6 @@ fun main(args: Array<String>) {
     t2.left = t1
     t2.right = t3
     println(s.inOrderWithStack(t4))
+    println(s.inOrderWithStack2(t4))
     println(s.inOrderMorris(t4))
 }
