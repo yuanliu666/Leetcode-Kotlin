@@ -25,8 +25,8 @@ class Solution_binary_tree_preorder_traversal {
         while (stk.isNotEmpty()) {
             val cur = stk.pop()
             ret.add(cur.value)
-            cur.right?.let { stk.push(cur.right) }
-            cur.left?.let { stk.push(cur.left) }
+            cur.right?.let { stk.push(it) }
+            cur.left?.let { stk.push(it) }
         }
         return ret
     }
