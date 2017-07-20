@@ -33,22 +33,23 @@ class Solution_brick_wall {
     // T:O(n*h) S:O(n) where n is number of bricks per height, h is the total height of wall
     fun getMinAcross(a: Array<Array<Int>>): Int {
         val map = mutableMapOf<Int, Int>()
+        val totalWidth = a[0].sum()
         var width: Int
         for (row in a) {
             width = 0
             for (w in row)
             // right margin does not count
-                if (w != row.last()) {
+                if (width + w != totalWidth) {
                     width += w
                     map.putIfAbsent(width, 0)
-                    map[width]?.plus(1)
+                    map.put(width, map[width]!!.inc())
                 }
         }
         // in case all one brick per height
         if (map.isEmpty()) {
             return a.size
         } else {
-            return a.size - map.keys.max() as Int
+            return a.size - map.values.max() as Int
         }
     }
 }
@@ -62,5 +63,15 @@ fun main(args: Array<String>) {
             arrayOf(2, 4),
             arrayOf(3, 1, 2),
             arrayOf(1, 3, 1, 1)
+    )))
+
+    println(s.getMinAcross(arrayOf(
+            arrayOf(2),
+            arrayOf(2)
+    )))
+
+    println(s.getMinAcross(arrayOf(
+            arrayOf(1, 1),
+            arrayOf(2)
     )))
 }
