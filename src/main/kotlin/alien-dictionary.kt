@@ -32,7 +32,7 @@
  * There may be multiple valid order of letters, return any one of them is fine.
  */
 
-import utils.myDeque
+import utils.MyDeque
 
 class Solution_alien_dictionary {
 
@@ -44,7 +44,7 @@ class Solution_alien_dictionary {
         val ret = StringBuilder()
 
         // we see a char as a node
-        val zeroInDegreeDq = myDeque<Char>()
+        val zeroInDegreeDq = MyDeque<Char>()
         // key is entered from values
         val inDegree = hashMapOf<Char, HashSet<Char>>()
         // key enters to values

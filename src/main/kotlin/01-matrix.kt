@@ -31,14 +31,14 @@
  * There are at least one 0 in the given matrix.
  * The cells are adjacent in only four directions: up, down, left and right.
  */
-import utils.myDeque
+import utils.MyDeque
 
 class Solution_01_matrix {
     // T:O(m*n) S:O(m*n) where m, n is the row number and column number of matrix
     fun updateMatrix(m: Array<Array<Int>>): Array<Array<Int>> {
 
         // use deque to get init 0s
-        val deque = myDeque<Pair<Int, Int>>()
+        val deque = MyDeque<Pair<Int, Int>>()
         for (i in 0..(m.size - 1))
             for (j in 0..(m[0].size - 1))
                 when (m[i][j]) {

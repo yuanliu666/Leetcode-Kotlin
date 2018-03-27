@@ -23,15 +23,15 @@
  *          \_/
  */
 
+import utils.MyDeque
 import utils.UndirectedGraphNode
-import utils.myDeque
 
 class Solution_clone_graph {
     // T:O(n) S:O(n)
     fun cloneGraph(n: UndirectedGraphNode): UndirectedGraphNode {
         val copy = UndirectedGraphNode(n.label)
         val map = mutableMapOf(n to copy)
-        val q = myDeque<UndirectedGraphNode>()
+        val q = MyDeque<UndirectedGraphNode>()
         while (q.peekFirst() != null) {
             val node = q.getFirst()
             node?.neighbors?.forEach {

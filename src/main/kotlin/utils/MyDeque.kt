@@ -7,7 +7,7 @@ package utils
  *
  * Reference: https://github.com/gazolla/Kotlin-Algorithm/blob/master/Deque/Deque.kt
  */
-class myDeque<T> {
+class MyDeque<T> {
 
     var backingList: MutableList<T> = arrayListOf()
 
