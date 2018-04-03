@@ -12,28 +12,28 @@
  * " 3+5 / 2 " = 5
  * Note: Do not use the eval built-in library function.
  */
-import java.util.*
 
 class Solution_basic_calculator_ii {
+
     // T:O(n) S:O(n)
-    fun calculate(expr: String): Int {
-        val nStk = Stack<Int>()
-        val opStk = Stack<Char>()
+    fun calculate(s: String): Int {
+        val nStk = java.util.Stack<Long>()
+        val opStk = java.util.Stack<Char>()
         var temp = ""
-        for (i in (expr.length - 1).downTo(0)) {
-            if (expr[i].isDigit()) {
-                temp += expr[i]
-                if (i == 0 || !expr[i - 1].isDigit()) {
-                    nStk.push(Integer.parseInt(temp))
+        for (i in (s.length - 1).downTo(0)) {
+            if (s[i].isDigit()) {
+                temp += s[i]
+                if (i == 0 || !s[i - 1].isDigit()) {
+                    nStk.push(temp.reversed().toLong())
                     temp = ""
                 }
-            } else if (expr[i] in arrayOf('*', '/', ')')) {
-                opStk.push(expr[i])
-            } else if (expr[i] == '+' || expr[i] == '-') {
+            } else if (s[i] in arrayOf('*', '/', ')')) {
+                opStk.push(s[i])
+            } else if (s[i] == '+' || s[i] == '-') {
                 while (opStk.isNotEmpty() && (opStk.peek() == '/' || opStk.peek() == '*'))
                     compute(nStk, opStk)
-                opStk.push(expr[i])
-            } else if (expr[i] == '(') {
+                opStk.push(s[i])
+            } else if (s[i] == '(') {
                 while (opStk.peek() != ')')
                     compute(nStk, opStk)
                 opStk.pop()
@@ -43,10 +43,10 @@ class Solution_basic_calculator_ii {
         while (opStk.isNotEmpty())
             compute(nStk, opStk)
 
-        return nStk.pop()
+        return nStk.pop().toInt()
     }
 
-    fun compute(nStk: Stack<Int>, opStk: Stack<Char>) {
+    private fun compute(nStk: java.util.Stack<Long>, opStk: java.util.Stack<Char>) {
         val left = nStk.pop()
         val right = nStk.pop()
         val op = opStk.pop()
@@ -60,6 +60,7 @@ class Solution_basic_calculator_ii {
 }
 
 fun main(args: Array<String>) {
+    // LC OJ passed
     val s = Solution_basic_calculator_ii()
     println(s.calculate("3+2*2"))
     println(s.calculate(" 3/2 "))
