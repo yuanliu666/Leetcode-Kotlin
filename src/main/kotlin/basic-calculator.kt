@@ -11,24 +11,24 @@
  * " 2-1 + 2 " = 3
  * "(1+(4+5+2)-3)+(6+8)" = 23
  */
-import java.util.*
 
 class Solution_basic_calculator {
+
     // T:O(n) S:O(n)
-    fun calculate(expr: String): Int {
-        val nStk = Stack<Int>()
-        val opStk = Stack<Char>()
+    fun calculate(s: String): Int {
+        val nStk = java.util.Stack<Long>()
+        val opStk = java.util.Stack<Char>()
         var temp = ""
-        for (i in (expr.length - 1).downTo(0)) {
-            if (expr[i].isDigit()) {
-                temp += expr[i]
-                if (i == 0 || !expr[i - 1].isDigit()) {
-                    nStk.push(Integer.parseInt(temp.reversed()))
+        for (i in (s.length - 1).downTo(0)) {
+            if (s[i].isDigit()) {
+                temp += s[i]
+                if (i == 0 || !s[i - 1].isDigit()) {
+                    nStk.push(temp.reversed().toLong())
                     temp = ""
                 }
-            } else if (expr[i] in arrayOf('+', '-', ')')) {
-                opStk.push(expr[i])
-            } else if (expr[i] == '(') {
+            } else if (s[i] in arrayOf('+', '-', ')')) {
+                opStk.push(s[i])
+            } else if (s[i] == '(') {
                 while (opStk.peek() != ')')
                     compute(nStk, opStk)
                 opStk.pop()
@@ -39,10 +39,10 @@ class Solution_basic_calculator {
             compute(nStk, opStk)
         }
 
-        return nStk.pop()
+        return nStk.pop().toInt()
     }
 
-    fun compute(nStk: Stack<Int>, opStk: Stack<Char>) {
+    private fun compute(nStk: java.util.Stack<Long>, opStk: java.util.Stack<Char>) {
         val left = nStk.pop()
         val right = nStk.pop()
         val op = opStk.pop()
@@ -50,11 +50,11 @@ class Solution_basic_calculator {
             nStk.push(left + right)
         else
             nStk.push(left - right)
-
     }
 }
 
 fun main(args: Array<String>) {
+    // LC OJ passed
     val s = Solution_basic_calculator()
     println(s.calculate("1 + 1"))
     println(s.calculate(" 2-1 + 2 "))
