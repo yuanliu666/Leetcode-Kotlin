@@ -44,10 +44,28 @@ class Solution_combination_sum_iv {
         }
         return dp.last()
     }
+
+    // T:O(nlogn + n*t) S:O(t)
+    fun combinationSum4Extra(nums: IntArray, target: Int): Int {
+        val dp = IntArray(target + 1, { 0 })
+        dp[0] = 1
+        nums.sort()
+        for (i in 0 until dp.size) {
+            for (n in nums) {
+                if (i + n < dp.size) {
+                    dp[i + n] += dp[i]
+                } else {
+                    break
+                }
+            }
+        }
+        return dp.last()
+    }
 }
 
 fun main(args: Array<String>) {
     // LC OJ passed
     val s = Solution_combination_sum_iv()
     println(s.combinationSum4(intArrayOf(1, 2, 3), 4))
+    println(s.combinationSum4Extra(intArrayOf(1, 2, 3), 4))
 }
