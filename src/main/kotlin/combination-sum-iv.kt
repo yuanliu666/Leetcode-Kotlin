@@ -29,7 +29,7 @@ class Solution_combination_sum_iv {
     // for original problem it's like coin change 2 problem without ordering
     // for follow up, an intuitive thought is that if somehow we can get sum of 0 then it might go infinite
 
-    // T: O(nlon + n * t), where t is the value of target, n is size of nums
+    // T: O(n * t), where t is the value of target, n is size of nums
     // S: O(t)
     fun combinationSum4(nums: IntArray, target: Int): Int {
         // let dp[i] denotes combination to form value i
