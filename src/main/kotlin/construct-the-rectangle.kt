@@ -41,6 +41,5 @@ class Solution_construct_the_rectangle {
 
 fun main(args: Array<String>) {
     // LC OJ Passed
-    val s = Solution_construct_the_rectangle()
-    println(s.constructRectangle(4).toList())
+    // See [ConstructTheRectangleTest] for unit test.
 }
