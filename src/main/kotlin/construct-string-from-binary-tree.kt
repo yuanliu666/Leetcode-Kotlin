@@ -51,22 +51,10 @@ class Solution_construct_string_from_binary_tree {
                     else -> "${t.value}(${tree2str(t.left)})(${tree2str(t.right)})"
                 }
             }
-
 }
 
 fun main(args: Array<String>) {
     // LC OJ passed,
     // note that LeetCode uses [treeNode.`val`] instead of [treeNode.value]
-    val s = Solution_construct_string_from_binary_tree()
-    val r1 = TreeNode(1)
-    r1.left = TreeNode(2)
-    r1.right = TreeNode(3)
-    r1.left?.left = TreeNode(4)
-    println(s.tree2str(r1))
-
-    val r2 = TreeNode(1)
-    r2.left = TreeNode(2)
-    r2.right = TreeNode(3)
-    r2.left?.right = TreeNode(4)
-    println(s.tree2str(r2))
+    // See [ConstructStringFromBinaryTreeTest] for unit test
 }
