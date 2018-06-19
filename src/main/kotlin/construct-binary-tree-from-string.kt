@@ -1,5 +1,3 @@
-import utils.TreeNode
-
 /**
  * You need to construct a binary tree from a string consisting of parenthesis and integers.
  *
@@ -27,6 +25,8 @@ import utils.TreeNode
  * 1. There will only be '(', ')', '-' and '0' ~ '9' in the input string.
  * 2. An empty tree is represented by "" instead of "()".
  */
+
+import utils.TreeNode
 
 class Solution_construct_binary_tree_from_string {
 
