@@ -47,7 +47,7 @@ class Solution_cheapest_flights_within_k_stops {
     // because the problem promises there is no self cycles, we can save a visited lookup table
 
     // T:O(|E|*|V|) S:O(|E| + |V|)
-    fun findCheapestPrice(n: Int, flights: Array<IntArray>, src: Int, dst: Int, K: Int): Int {
+    fun findCheapestPrice(@Suppress("UNUSED_PARAMETER") n: Int, flights: Array<IntArray>, src: Int, dst: Int, K: Int): Int {
         // put flights into a map for lookup, as src~listOf((dst, price)) format
         val map = HashMap<Int, MutableList<Pair<Int, Int>>>()
         for (arr in flights) {
@@ -96,7 +96,7 @@ class Solution_cheapest_flights_within_k_stops {
     // (obviously this is THE cheapest flight to dst if any, and rest trips' total prices will be getting even larger)
 
     // T:O(|E| + |V|log|V|) S:O(|E| + |V|)
-    fun findCheapestPrice2(n: Int, flights: Array<IntArray>, src: Int, dst: Int, K: Int): Int {
+    fun findCheapestPrice2(@Suppress("UNUSED_PARAMETER") n: Int, flights: Array<IntArray>, src: Int, dst: Int, K: Int): Int {
         // put flights into a map for lookup, as src~listOf((dst, price)) format
         val map = HashMap<Int, MutableList<Pair<Int, Int>>>()
         for (arr in flights) {
