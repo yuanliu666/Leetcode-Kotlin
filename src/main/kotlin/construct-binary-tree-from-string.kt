@@ -1,4 +1,3 @@
-import utils.BinaryTreePrinter
 import utils.TreeNode
 
 /**
@@ -113,11 +112,5 @@ class Solution_construct_binary_tree_from_string {
 }
 
 fun main(args: Array<String>) {
-    val s = Solution_construct_binary_tree_from_string()
-    BinaryTreePrinter.printNode(s.constructTree("4(2(3)(1))(6(5))"))
-    BinaryTreePrinter.printNode(s.constructTree("4(2(3)(-1))(6(-5))"))
-    BinaryTreePrinter.printNode(s.constructTree("4(2(3)(1))"))
-    BinaryTreePrinter.printNode(s.constructTree2("4(2(3)(1))(6(5))"))
-    BinaryTreePrinter.printNode(s.constructTree2("4(2(3)(-1))(6(-5))"))
-    BinaryTreePrinter.printNode(s.constructTree2("4(2(3)(1))"))
+    // see [ConstructBinaryTreeFromStringTest] for unit test
 }
