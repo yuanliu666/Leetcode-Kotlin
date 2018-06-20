@@ -19,7 +19,7 @@
  * 4. The returned elements order does not matter.
  */
 
-class Solution_concatenated_wors {
+class Solution_concatenated_words {
 
     // original solution, slow
     // T:O(nlogn + n^3)
@@ -61,7 +61,7 @@ class Solution_concatenated_wors {
     }
 
     // dp based solution, much faster
-    // T:  O(n * L^2)
+    // T: O(n * L^2)
     // S: O(n * L) where n is size of words array, L is average length of word
     fun findAllConcatenatedWordsInADict2(words: Array<String>): List<String> {
         val lookup: MutableSet<String> = mutableSetOf()
@@ -91,9 +91,5 @@ class Solution_concatenated_wors {
 
 fun main(args: Array<String>) {
     // LC OJ Passed
-    val s = Solution_concatenated_wors()
-    println(s.findAllConcatenatedWordsInADict(arrayOf("cat", "cats", "catsdogcats", "dog", "dogcatsdog", "hippopotamuses", "rat", "ratcatdogcat")))
-    println(s.findAllConcatenatedWordsInADict(arrayOf("")))
-    println(s.findAllConcatenatedWordsInADict2(arrayOf("cat", "cats", "catsdogcats", "dog", "dogcatsdog", "hippopotamuses", "rat", "ratcatdogcat")))
-    println(s.findAllConcatenatedWordsInADict2(arrayOf("")))
+    // see [ConcatenatedWordsTest] for unit test
 }
