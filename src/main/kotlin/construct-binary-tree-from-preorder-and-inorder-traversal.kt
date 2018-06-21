@@ -1,6 +1,3 @@
-import utils.BinaryTreePrinter
-import utils.TreeNode
-
 /**
  * Given preorder and inorder traversal of a tree, construct the binary tree.
  *
@@ -20,7 +17,10 @@ import utils.TreeNode
  *  15   7
  */
 
+import utils.TreeNode
+
 class Solution_construct_binary_tree_from_preorder_and_inorder_traversal {
+
     // T:O(n) S:O(n)
     // very similar to last question
     fun buildTree(preorder: IntArray, inorder: IntArray): TreeNode? {
@@ -53,6 +53,5 @@ class Solution_construct_binary_tree_from_preorder_and_inorder_traversal {
 
 fun main(args: Array<String>) {
     // LC OJ Passed
-    val s = Solution_construct_binary_tree_from_preorder_and_inorder_traversal()
-    BinaryTreePrinter.printNode(s.buildTree(intArrayOf(3, 9, 20, 15, 7), intArrayOf(9, 3, 15, 20, 7)))
+    // see [ConstructBinaryTreeFromPreorderAndInorderTraversalTest] for unit test
 }
