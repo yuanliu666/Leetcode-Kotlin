@@ -1,4 +1,3 @@
-import utils.BinaryTreePrinter
 import utils.TreeNode
 
 /**
@@ -61,7 +60,5 @@ class Solution_construct_binary_tree_from_inorder_and_postorder_traversal {
 
 fun main(args: Array<String>) {
     // LC OJ passed
-    val s = Solution_construct_binary_tree_from_inorder_and_postorder_traversal()
-    val r = s.buildTree(intArrayOf(9, 3, 15, 20, 7), intArrayOf(9, 15, 7, 20, 3))
-    BinaryTreePrinter.printNode(r)
+    // see [ConstructBinaryTreeFromInorderAndPostorderTraversalTest] for unit test
 }
