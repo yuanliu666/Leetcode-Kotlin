@@ -21,6 +21,7 @@
  */
 
 class Solution_complex_number_multiplication {
+
     fun complexNumberMultiply(a: String, b: String): String {
         val (aInt, aComplex) = breakDown(a)
         val (bInt, bComplex) = breakDown(b)
@@ -38,7 +39,5 @@ class Solution_complex_number_multiplication {
 
 fun main(args: Array<String>) {
     // LC OJ Passed
-    val s = Solution_complex_number_multiplication()
-    println(s.complexNumberMultiply("1+1i", "1+1i"))
-    println(s.complexNumberMultiply("1+-1i", "1+-1i"))
+    // see [ComplexNumberMultiplicationTest] for unit test
 }
