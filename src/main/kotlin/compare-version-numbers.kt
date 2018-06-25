@@ -76,16 +76,5 @@ class Solution_compare_version_numbers {
 
 fun main(args: Array<String>) {
     // LC OJ Passed
-    val s = Solution_compare_version_numbers()
-    println(s.compareVersion("01", "1"))
-    println(s.compareVersion("0.1", "1.1"))
-    println(s.compareVersion("1.0.1", "1"))
-    println(s.compareVersion("7.5.2.4", "7.5.3"))
-    println(s.compareVersion("7", "7.0.0"))
-
-    println(s.compareVersion1("01", "1"))
-    println(s.compareVersion1("0.1", "1.1"))
-    println(s.compareVersion1("1.0.1", "1"))
-    println(s.compareVersion1("7.5.2.4", "7.5.3"))
-    println(s.compareVersion1("7", "7.0.0"))
+    // see [CompareVersionNumbersTest] for unit test
 }
