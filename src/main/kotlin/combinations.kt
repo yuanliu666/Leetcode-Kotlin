@@ -16,6 +16,7 @@
  */
 
 class Solution_combinations {
+
     // T: O(k * C(n, k))
     // S: O(k)
 
@@ -71,7 +72,5 @@ class Solution_combinations {
 
 fun main(args: Array<String>) {
     // LC OJ passed
-    val s = Solution_combinations()
-    println(s.combine(4, 2))
-    println(s.combine2(4, 2))
+    // see [CombinationsTest] for unit test
 }
