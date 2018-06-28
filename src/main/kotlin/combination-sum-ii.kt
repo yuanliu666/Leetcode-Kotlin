@@ -17,6 +17,7 @@
  */
 
 class Solution_combination_sum_ii {
+
     // T:O(k * C(n, k)) S:O(k)
     fun getCombinationSumSet(n: Array<Int>, t: Int): Set<List<Int>> {
         val ret = mutableSetOf<List<Int>>()
@@ -42,6 +43,6 @@ class Solution_combination_sum_ii {
 }
 
 fun main(args: Array<String>) {
-    val s = Solution_combination_sum_ii()
-    println(s.getCombinationSumSet(arrayOf(10, 1, 2, 7, 6, 1, 5), 8))
+    // LC OJ Passed
+    // see [CombinationSumIITest] for unit test
 }
