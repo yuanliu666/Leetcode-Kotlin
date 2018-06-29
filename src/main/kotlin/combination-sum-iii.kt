@@ -24,6 +24,8 @@
  */
 
 class Solution_combination_sum_iii {
+
+    // T:O(k*C(k,n)) S:O(k)
     fun getSets(k: Int, n: Int): Set<List<Int>> {
         val ret = mutableSetOf<List<Int>>()
         helper(k, n, 1, mutableListOf(), ret)
@@ -50,7 +52,6 @@ class Solution_combination_sum_iii {
 }
 
 fun main(args: Array<String>) {
-    val s = Solution_combination_sum_iii()
-    println(s.getSets(3, 7))
-    println(s.getSets(3, 9))
+    // LC OJ passed
+    // see [CombinationSumIIITest] for unit test
 }
