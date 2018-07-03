@@ -55,10 +55,5 @@ class Solution_count_and_say {
 
 fun main(args: Array<String>) {
     // LC OJ Passed
-    val s = Solution_count_and_say()
-    println(s.countAndSay(1))
-    println(s.countAndSay(2))
-    println(s.countAndSay(3))
-    println(s.countAndSay(4))
-    println(s.countAndSay(5))
+    // see [CountAndSayTest] for test
 }
