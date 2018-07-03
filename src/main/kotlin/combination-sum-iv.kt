@@ -65,7 +65,5 @@ class Solution_combination_sum_iv {
 
 fun main(args: Array<String>) {
     // LC OJ passed
-    val s = Solution_combination_sum_iv()
-    println(s.combinationSum4(intArrayOf(1, 2, 3), 4))
-    println(s.combinationSum4Extra(intArrayOf(1, 2, 3), 4))
+    // see [CombinationSumIVTest] for unit test
 }
