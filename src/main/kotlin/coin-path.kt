@@ -46,7 +46,7 @@ class Solution_coin_path {
         }
         val dp = Array(coins.size, { Pair(0, Int.MAX_VALUE) })
         dp[0] = Pair(0, 0)
-        for (i in 0..coins.size - 1) {
+        for (i in 0 until coins.size) {
             for (j in 1..step) {
                 if (coins[i] != -1 && i + j < coins.size && coins[i + j] != -1) {
                     if (dp[i].second + coins[i] < dp[i + j].second) {
@@ -55,8 +55,8 @@ class Solution_coin_path {
                 }
             }
         }
-        if (dp.last().second == Int.MAX_VALUE) {
-            return emptyList()
+        return if (dp.last().second == Int.MAX_VALUE) {
+            emptyList()
         } else {
             var idx = coins.size - 1
             val ret = mutableListOf(idx + 1)
@@ -64,13 +64,11 @@ class Solution_coin_path {
                 ret.add(dp[idx].first + 1)
                 idx = dp[idx].first
             }
-            return ret.reversed()
+            ret.reversed()
         }
     }
 }
 
 fun main(args: Array<String>) {
-    val s = Solution_coin_path()
-    println(s.getMinCoins(arrayOf(1, 2, 4, -1, 2), 2))
-    println(s.getMinCoins(arrayOf(1, 2, 4, -1, 2), 1))
+    // see [CoinPathTest] for unit test
 }
