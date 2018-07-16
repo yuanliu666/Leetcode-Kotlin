@@ -62,8 +62,5 @@ class Solution_coin_change_2 {
 
 fun main(args: Array<String>) {
     // LC OJ passed
-    val s = Solution_coin_change_2()
-    println(s.change(5, intArrayOf(1, 2, 5)))
-    println(s.change(3, intArrayOf(2)))
-    println(s.change(10, intArrayOf(10)))
+    // see [CoinChange2Test] for unit test
 }
