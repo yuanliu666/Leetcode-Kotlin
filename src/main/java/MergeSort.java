@@ -13,7 +13,7 @@ public class MergeSort {
 
     private void helper(int[] arr, int s, int e) {
         if (e - s <= 1) return;
-        int m = s + ((e - s) >> 1);
+        int m = (s + e) / 2;
         helper(arr, s, m);
         helper(arr, m, e);
         int r = m;
