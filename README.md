@@ -7,3 +7,6 @@ It's exciting to see 3 stars -- at lease someone cares. From my personal experie
 This is not to say Kotlin is not good, but its power is more on the developing side -- the ability to create literally every tool/extension we want. But for short algorithm code, Kotlin has the burden of dealing with null.    
 Anyway Kotlin is better than Java for leetcode problems.    
 Thanks for your support and now I want to keep updating this repo. 
+
+#### Update 11/18/2022:
+I was laid off recently, so back to it again!
