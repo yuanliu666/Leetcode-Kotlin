@@ -5,30 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f899c7a-f78a-48cd-a170-a354fc83be77" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/Leetcode-Kotlin.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/Leetcode-Kotlin.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/delete-characters-to-make-fancy-string.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/find-pivot-index.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/find-resultant-array-after-removing-anagrams.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/greatest-english-letter-in-upper-and-lower-case.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/guess-number-higher-or-lower.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/is-subsequence.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/isomorphic-strings.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/maximum-number-of-words-you-can-type.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/partition-equal-subset-sum.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/rectangle-area.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/running-sum-of-1d-array.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teemo-attacking.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Leetcode-Kotlin_main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Leetcode-Kotlin_test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +56,28 @@
       <option name="presentableId" value="Default" />
       <updated>1668791149183</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add some questions.&#10;Update readme.">
+      <created>1668799200688</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668799200688</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add some questions.">
+      <created>1668809810476</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668809810476</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Add some questions.&#10;Update readme." />
+    <MESSAGE value="Add some questions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some questions." />
   </component>
 </project>
