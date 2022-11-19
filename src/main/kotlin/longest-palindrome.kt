@@ -6,7 +6,7 @@
  * 1 <= s.length <= 2000
  * s consists of lowercase and/or uppercase English letters only.
  */
-class `longest-palindrome` {
+class Solution_longest_palindrome {
 
     // T:O(n) S:O(1)
     fun longestPalindrome(s: String): Int {
