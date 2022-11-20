@@ -51,6 +51,49 @@ class Solution_basic_calculator {
         else
             nStk.push(left - right)
     }
+
+    // Update version with allowing '-' as unary operation: e.g. "-2+1", "-(-2)"
+    // The key is to save sign as well, to handle case like "1-(-2)"
+    // T:O(n) S:O(n)
+    fun calculate2(s: String): Int {
+        val stk = Stack<Int>()
+        var ret = 0
+        var num = 0
+        var sign = 1
+        for (i in s.indices) {
+            val c = s[i]
+            when {
+                c.isDigit() -> num = num * 10 + (c - '0')
+                c == '+' -> {
+                    ret += sign * num
+                    num = 0
+                    sign = 1
+                }
+
+                c == '-' -> {
+                    ret += sign * num
+                    num = 0
+                    sign = -1
+                }
+
+                c == '(' -> {
+                    stk.push(ret)
+                    stk.push(sign)
+                    sign = 1
+                    ret = 0
+                }
+
+                c == ')' -> {
+                    ret += sign * num
+                    num = 0
+                    ret *= stk.pop()
+                    ret += stk.pop()
+                }
+            }
+        }
+        if (num != 0) ret += sign * num
+        return ret
+    }
 }
 
 fun main(args: Array<String>) {
