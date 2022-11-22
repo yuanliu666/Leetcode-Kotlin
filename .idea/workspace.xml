@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f899c7a-f78a-48cd-a170-a354fc83be77" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_7_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_7_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/erect-the-fence.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_13_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_2_41.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_2_41.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_7_20.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_2_41.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_7_20.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Leetcode-Kotlin.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Leetcode-Kotlin.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Leetcode-Kotlin.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Leetcode-Kotlin.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/nearest-exit-from-entrance-in-maze.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/longest-palindrome.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/longest-palindrome.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,15 +43,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "F:/Leetcode-Kotlin",
-    "settings.editor.selected.configurable": "preferences.language.Kotlin"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Leetcode-Kotlin&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.language.Kotlin&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -106,7 +96,35 @@
       <option name="project" value="LOCAL" />
       <updated>1668881814676</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add problem.">
+      <created>1668886789994</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668886789994</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add problems.">
+      <created>1668908731689</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668908731689</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add problems.">
+      <created>1668974771158</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668974771158</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add problems.">
+      <created>1669049700889</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669049700889</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -115,9 +133,9 @@
     <MESSAGE value="Add some questions.&#10;Update readme." />
     <MESSAGE value="Add some questions." />
     <MESSAGE value="Add description." />
-    <MESSAGE value="Add problems." />
     <MESSAGE value="Add problem." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add problem." />
+    <MESSAGE value="Add problems." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add problems." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
