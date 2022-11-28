@@ -7,7 +7,7 @@
  * The test cases are generated so that the answer will be less than or equal to 2 * 10^9.
  */
 class Solution_unique_paths {
-    
+
     // T:O(m*n) S:O(n)
     // Using rolling dp with 2 rows to save space as dp value only requires left and top
     fun uniquePaths(m: Int, n: Int): Int {
