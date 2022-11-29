@@ -6,6 +6,8 @@ import java.util.PriorityQueue
  * Sort the words with the same frequency by their lexicographical order.
  */
 class Solution_top_k_frequent_words {
+
+    // T:O(nlogk) S:O(n)
     fun topKFrequent(words: Array<String>, k: Int): List<String> {
         val map = hashMapOf<String, Int>()
         words.forEach {
