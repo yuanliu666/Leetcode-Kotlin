@@ -17,7 +17,7 @@ class Solution_minimum_moves_to_equal_array_elements_ii {
     // and s = [sum of elements greater than k] - [sum of elements smaller than k] to be small, they are kind of going opposite directions:
     // when smaller number increases, k*(p-q) goes up but s goes down.
     // This gives up 2 intuitive points: first is median, where p = q which makes first part smallest;
-    // second is after median, which can make s smallest.
+    // second is maybe somewhere after median, which can make s smallest.
     // Let's divide arr into 3 parts, length of L1,L2,L3 and sum of S1,S2,S3,
     // where median is at end of L1, the second point is at end of L2:
     // L1 = L2 + L3, S1 + S2 = S3
