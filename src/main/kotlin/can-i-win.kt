@@ -36,7 +36,9 @@ class Solution_can_i_win {
     // We can use a n-bit mask here, 1 at ith position from right means i has been used
     // So let lookup[mask] means based on previous selections, current player can win or not
 
-    // T:O(n!) S:O(n)
+    // T:O(n*2^n) S:O(2^n)
+    // From the bit mask we know the space complexity will be O(2^n),
+    // for time it's similar except each process we need to iterate n so that's another factor.
     fun isIWin(n: Int, d: Int): Boolean {
         if ((1 + n) * n / 2 < d) {
             return false
