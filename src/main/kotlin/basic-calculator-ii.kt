@@ -57,6 +57,54 @@ class Solution_basic_calculator_ii {
             '/' -> nStk.push(left / right)
         }
     }
+
+    // T:O(n) S:O(n). Since there is no bracket, we can calculate '*' and '/' on sight.
+    // For '-', either go from right to left, or we can convert it to '+' with a sign.
+    // Because here A - B... = A + (-B)..., no matter what is after B.
+    fun calculate2(s: String): Int {
+        val stkNum = Stack<Int>()
+        val stkOpt = Stack<Char>()
+        var n = 0
+        var sign = 1
+        for (c in s) {
+            when (c) {
+                ' ' -> continue
+                in '0'..'9' -> {
+                    n = n * 10 + (c - '0')
+                }
+                // operators
+                else -> {
+                    stkNum.push(sign * n)
+                    n = 0
+                    // calculate previous * and /
+                    if (stkOpt.isNotEmpty() && stkOpt.peek() in listOf('*', '/')) {
+                        val n2 = stkNum.pop()
+                        val n1 = stkNum.pop()
+                        stkNum.push(if (stkOpt.pop() == '*') n1 * n2 else n1 / n2)
+                    }
+                    if (c == '-') {
+                        stkOpt.push('+')
+                        sign = -1
+                    } else {
+                        sign = 1
+                        stkOpt.push(c)
+                    }
+                }
+            }
+        }
+        stkNum.push(sign * n)
+
+        while (stkOpt.isNotEmpty()) {
+            val n2 = stkNum.pop()
+            val n1 = stkNum.pop()
+            when (stkOpt.pop()) {
+                '+' -> stkNum.push(n1 + n2)
+                '*' -> stkNum.push(n1 * n2)
+                '/' -> stkNum.push(n1 / n2)
+            }
+        }
+        return stkNum.pop()
+    }
 }
 
 fun main(args: Array<String>) {
