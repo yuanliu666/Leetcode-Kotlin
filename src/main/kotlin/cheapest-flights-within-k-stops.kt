@@ -40,6 +40,7 @@ import java.lang.Integer.min
 
 class Solution_cheapest_flights_within_k_stops {
 
+    // TLE now
     // fun fact: parameter n actually has no use here
 
     // BFS solution
@@ -90,6 +91,7 @@ class Solution_cheapest_flights_within_k_stops {
         }
     }
 
+    // TLE now
     // min heap solution
     // instead of going 1 step from each trip as BFS, we go 1 step from cheapest trip so far
     // and once the cheapest flight from the heap is to dst, that is answer
@@ -122,6 +124,41 @@ class Solution_cheapest_flights_within_k_stops {
                 for ((d, p) in it) {
                     pq.offer(Triple(d, p + t.second, t.third + 1))
                 }
+            }
+        }
+        return -1
+    }
+
+    // Improved min heap solution. To avoid going to visited stops.
+    // Why it works? Because we are fetching from price min heap, meaning that if we visited this stop before,
+    // it must be a lower cost, hence no point to revisit.
+    // Same complexity as min heap solution.
+    fun findCheapestPrice3(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
+        if (src == dst) return 0
+        val map = hashMapOf<Int, MutableList<Pair<Int, Int>>>()
+        for (f in flights) {
+            val from = f[0]
+            val to = f[1]
+            val price = f[2]
+            map.putIfAbsent(from, mutableListOf())
+            map[from]?.add(Pair(to, price))
+        }
+
+        // Min heap for (total prices, curStop, # stops)
+        val heap = PriorityQueue<IntArray>(compareBy { it[0] })
+        // Record last visited steps for each stop
+        val visited = IntArray(n) { Int.MAX_VALUE }
+        heap.offer(intArrayOf(0, src, 0))
+        while (heap.isNotEmpty()) {
+            val arr = heap.poll()
+            val cost = arr[0]
+            val curStop = arr[1]
+            val steps = arr[2]
+            if (curStop == dst) return cost
+            if (visited[curStop] < steps || steps > k) continue
+            visited[curStop] = steps
+            for (p in map[curStop] ?: mutableListOf()) {
+                heap.offer(intArrayOf(cost + p.second, p.first, steps + 1))
             }
         }
         return -1
