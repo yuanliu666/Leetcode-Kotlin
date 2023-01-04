@@ -8,7 +8,7 @@ class Solution_largest_rectangle_in_histogram {
     // Keep an increasing stack. When another larger value comes, put in.
     // Otherwise, start poping until previous value is smaller.
     // We can see last indice i - 1 is always in when considering i.
-    // An important observation is, for two adjacent indices i and j, h[i] < h[j], what's in between?
+    // An important observation is, for two adjacent stack elements i and j, h[i] < h[j], what's in between?
     // The answer h[k] >= h[j] for i< k <j. Why?
     // Because if h[k] < h[j], it should stay in the stack.
     // e.g. h[i] = 50, h[j] = 100, if the values in between are something like 30, it will kick out 50;
