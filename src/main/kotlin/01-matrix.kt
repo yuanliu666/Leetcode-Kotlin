@@ -71,6 +71,48 @@ class Solution_01_matrix {
 
         return m
     }
+
+    // DP solution. Need 2 passes, first pass covers left and top path, and second pass covers right and bottom path.
+    // T:O(m*n) S:O(1)
+    fun updateMatrix2(mat: Array<IntArray>): Array<IntArray> {
+        val m = mat.size
+        val n = mat[0].size
+        // Cannot init to Int.MAX otherwise will overflow
+        val ret = Array(m) { IntArray(n) { 100000 } }
+        for (i in 0 until m) {
+            for (j in 0 until n) {
+                if (mat[i][j] == 0) {
+                    ret[i][j] = 0
+                } else {
+                    when {
+                        i != 0 && j != 0 -> {
+                            ret[i][j] = kotlin.math.min(ret[i - 1][j], ret[i][j - 1]) + 1
+                        }
+
+                        i != 0 -> ret[i][j] = ret[i - 1][j] + 1
+                        j != 0 -> ret[i][j] = ret[i][j - 1] + 1
+                        else -> {}
+                    }
+                }
+            }
+        }
+
+        for (i in (0 until m).reversed()) {
+            for (j in (0 until n).reversed()) {
+                if (mat[i][j] == 0) continue
+                when {
+                    i != m - 1 && j != n - 1 -> {
+                        ret[i][j] = kotlin.math.min(ret[i][j], kotlin.math.min(ret[i + 1][j], ret[i][j + 1]) + 1)
+                    }
+
+                    i != m - 1 -> ret[i][j] = kotlin.math.min(ret[i][j], ret[i + 1][j] + 1)
+                    j != n - 1 -> ret[i][j] = kotlin.math.min(ret[i][j], ret[i][j + 1] + 1)
+                    else -> {}
+                }
+            }
+        }
+        return ret
+    }
 }
 
 fun main(args: Array<String>) {
